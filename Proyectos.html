@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-image: url(img/fondoproyecto.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+        h1{
+            color: grey;
+            margin: 50px 0px;
+            display: block;
+            text-align: center;
+            font-size: 80px;
+            text-shadow: 0 o 20 blueviolet;
+        }
+        .fotos{
+            width: 100%;
+            margin: 0 auto;
+        }
+        .container::after{
+            /* Para que el contenesor muestre elementos aunque
+             estos sean flotantes */
+             content:"";
+             display: block;
+             height: 0px;
+             clear: both;
+
+        }
+        .container{
+            width: 90%;
+            margin: 0 9%;
+        }
+        /* estructura de cada componente de la galeria (imagen + descripción)*/
+        .container div{
+            width: 28%;
+            height: 15%;
+            display: inline;
+            float: left;
+            margin: 0% 3% 0% 0%;
+            padding: 0px;
+        }
+        .container div img{
+            width: 100%;
+            height: auto;
+            box-shadow: 0 0 10px #666;
+            border: 5px solid #fff;
+        }
+        /*estructura de la descripción por defecto, que no se muestre  */
+        .container div img~span{
+            width:100%;
+            display: block;
+            opacity:0;
+            margin: 0;
+            padding: 3px 5px;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 0 10px #666;
+            text-align: center;
+        }
+        /* Se muestra la descripción al posicionar el cursor encima de la imagen */
+        .container div img:hover+span{
+            opacity: 1;
+        }
+        /* se especifica el comportamiento que tendrán las imágenes al posicionar el cursor encima del contenedor */
+        .container:hover div{
+            opacity: 0.2;
+            transform: scale(0.7);
+            transition: 2s;
+        }
+        /*se especifica el comportamiento que tendrá la imagen seleccionada */
+        .container:hover div:hover{
+            opacity: 1;
+            transform: scale(1);
+        }
+
+
+
+
+
+    </style>
+    <title>Proyectos</title>
+</head>
+<body>
+    <div>
+        <h1>PROYECTOS UNIR FP</h1>
+    </div>
+    <section class="fotos">
+        <div class="container">
+            <div><img src="img/pro.jpg" alt=""><span>Programación</span></div>
+            <div><img src="img/base.jpg" alt=""><span>Base de Datos</span></div>
+            <div><img src="img/marcas.jpg" alt=""><span>Lenguaje de Marcas</span></div>
+            
+
+        </div>
+    </section>
+</body>
+</html>

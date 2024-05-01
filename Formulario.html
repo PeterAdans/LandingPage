@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            background-image: url(img/fondoproyecto.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%; 
+        }
+        .contenedor{
+            width: 100%;
+            padding: 15px;
+        }
+        .formulario{
+            background: #fff;
+            margin-top: 100px;
+        }
+        h1{
+            padding-top: 20px;
+            text-align: center;
+            color: #1a2537;
+            font-size: 40px;
+        }
+        img{
+            padding-top: 4px;
+           width: 35px; 
+           height: 35px;
+           text-align: center;
+
+        }
+        input[type="text"], input[type="password"]{
+            text-align: center;
+            font-size: 20px;
+            width: 80%;
+            padding: 10px;
+            border:none;
+
+        }
+        .input-contenedor{
+            margin-bottom: 15px;
+            border: 1px solid #aaa;
+        }
+        .button{
+            border: none;
+            width:100%;
+            font-size: 20px;
+            color: white;
+            background-color: #1a2537;
+            padding: 15px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+        .button:hover{
+            background-color: cadetblue;
+        }
+        p{
+            text-align: center;
+        }
+        .link{
+            text-decoration: none;
+            color: #1a2537;
+            font: weight 600px;
+        }
+        .link:hover{
+            color: cadetblue;
+            
+        }
+        @media(min-width: 768px){
+            .formulario{
+                margin-top: 150px;
+                width: 500px;
+                margin: auto;
+                border-radius: 2%;
+            }
+        }
+
+
+    </style>
+    <title>Formulario</title>
+</head>
+<body>
+    <form class="formulario">
+        <h1>Contacto</h1>
+        <div class="contenedor">
+            <div class="input-contenedor">
+                <img class="icon" src="icons/usu.png"/>
+                <input type="text" placeholder="Nombre de usuario">
+
+            </div>
+            <div class="input-contenedor">
+                <img class="icon" src="icons/mail.png"/>
+                <input type="text" placeholder="Correo electrónico">
+
+            </div>
+            <div class="input-contenedor">
+                <img class="icon" src="icons/contra.png"/>
+                <input type="password" placeholder="Contraseña">
+            </div>
+            <input type="submit" value="Registro" class="button">
+            <p>Al registrarse, acepta nuestras condiciones de uso y política de privacidad. </p>
+            <p>¿Ya tienes cuenta? <a class="link" href="Formulario.html">Iniciar sesión</a></p>
+        </div>
+
+    </form>
+</body>
+</html>
